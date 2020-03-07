@@ -4,10 +4,14 @@ import QuestionTitle from '../misc/QuestionTitle';
 import {format} from 'date-fns';
 import {KeyboardDateTimePicker} from '@material-ui/pickers';
 
-export default function Question({setQuestion, updateResponse, responses, onComplete}) {
+export default function Question({setQuestion, updateResponse, responses}) {
 
   const handleBack = () => {
     setQuestion('ListOfDefects');
+  };
+
+  const handleNext = () => {
+    setQuestion('AppointingAnExpert');
   };
 
   const emptyAvailability = {
@@ -74,8 +78,8 @@ export default function Question({setQuestion, updateResponse, responses, onComp
         <Button variant="contained" color="secondary" onClick={handleBack}>
           Back
         </Button>
-        <Button variant="contained" color="secondary" onClick={onComplete}>
-          Complete
+        <Button variant="contained" color="secondary" onClick={handleNext}>
+          Next
         </Button>
       </Box>
     </Box>
