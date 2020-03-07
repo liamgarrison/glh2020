@@ -23,7 +23,7 @@ const theme = createMuiTheme({
 
 export default function App () {
 
-  const [questionnaire, setQuestionnaire] = useState('MainQuestionnaire');
+  const [questionnaire, setQuestionnaire] = useState('QualificationQuestionnaire');
 
   const onCompleteQualificationQuestionnaire = () => {
     setQuestionnaire('MainQuestionnaire');

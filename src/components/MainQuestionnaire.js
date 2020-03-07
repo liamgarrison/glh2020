@@ -5,7 +5,7 @@ import QuestionCard from './misc/QuestionCard';
 
 export default function App () {
 
-  const [question, setQuestion] = useState('HistoryOfEvents');
+  const [question, setQuestion] = useState('Intro');
   const [questionData, setQuestionData] = useState({
     tenant: {
       name: '',
