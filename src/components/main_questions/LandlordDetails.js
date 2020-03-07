@@ -5,7 +5,7 @@ import QuestionTitle from '../misc/QuestionTitle';
 export default function Question({setQuestion, updateResponse, responses}) {
 
   const handleContinue = () => {
-    setQuestion('Defects');
+    setQuestion('DetailsOfIssue');
   };
 
   const handleBack = () => {

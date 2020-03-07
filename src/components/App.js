@@ -23,7 +23,7 @@ const theme = createMuiTheme({
 
 export default function App () {
 
-  const [questionnaire, setQuestionnaire] = useState('QualificationQuestionnaire');
+  const [questionnaire, setQuestionnaire] = useState('MainQuestionnaire');
 
   const onCompleteQualificationQuestionnaire = () => {
     setQuestionnaire('MainQuestionnaire');
@@ -35,7 +35,7 @@ export default function App () {
   
   return (
     <ThemeProvider theme={theme}>
-      <Box bgcolor="#cef0ff" height="100vh">
+      <Box bgcolor="#cef0ff" minHeight="100vh" pb={8}>
         <Header/>
         <Container maxWidth="sm">
           {questionnaire === 'QualificationQuestionnaire' && (

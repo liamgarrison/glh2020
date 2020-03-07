@@ -51,8 +51,8 @@ export default function Question({setQuestion, updateResponse, responses}) {
           <TextField 
             label="Postcode"
             variant="outlined"
-            onChange={e => updateResponse('postcode', e.target.value)}
-            value={responses.postcode}
+            onChange={e => updateResponse('tenant.postcode', e.target.value)}
+            value={responses.tenant.postcode}
             margin="normal"
           />
         </FormGroup>

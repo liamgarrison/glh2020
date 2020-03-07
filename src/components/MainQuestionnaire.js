@@ -5,7 +5,7 @@ import QuestionCard from './misc/QuestionCard';
 
 export default function App () {
 
-  const [question, setQuestion] = useState('Intro');
+  const [question, setQuestion] = useState('HistoryOfEvents');
   const [questionData, setQuestionData] = useState({
     tenant: {
       name: '',
@@ -13,7 +13,7 @@ export default function App () {
       address2: '',
       address3: '',
       city: '',
-      postcode: ''
+      postcode: '',
     },
     landlord: {
       name: '',
@@ -22,7 +22,13 @@ export default function App () {
       address3: '',
       city: '',
       postcode: ''
-    }
+    },
+    issue: {
+      summary: '',
+      effects: ''
+    },
+    history: [],
+    defects: [] 
   });
 
   const updateResponse = (path, value) => {
@@ -33,7 +39,7 @@ export default function App () {
   
   const Component = mainQuestions[question];
 
-  console.table(questionData);
+  console.log(questionData);
   
   return (
     <QuestionCard>
