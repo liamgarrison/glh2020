@@ -1,7 +1,7 @@
 import React from 'react';
 import {Button, TextField, Box, FormGroup, Typography} from '@material-ui/core';
 
-export default function Question1({setQuestion, updateResponse, responses}) {
+export default function Question({setQuestion, updateResponse, responses}) {
 
   const handleNext = () => {
   }

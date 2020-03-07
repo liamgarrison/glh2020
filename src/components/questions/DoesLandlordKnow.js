@@ -4,16 +4,16 @@ import {Button, Box, Typography} from '@material-ui/core';
 export default function Question({setQuestion}) {
 
   const handleYes = () => {
-    setQuestion('DamageCost')
+    setQuestion('HasLandlordStartedProceedings')
   }
-
+  
   const handleNo = () => {
-    setQuestion('DoesLandlordKnow')
+    setQuestion('PleaseContactLandlord')
   }
 
   return (
     <Box>
-      <Typography variant="h2">Do you live in a council home?</Typography>
+      <Typography variant="h2">Does the landlord know about the disrepair?</Typography>
       <Box>
         <Button variant="contained" color="secondary" onClick={handleNo}>
           No

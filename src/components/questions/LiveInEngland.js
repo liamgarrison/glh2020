@@ -1,7 +1,7 @@
 import React from 'react';
 import {Button, Box, Typography} from '@material-ui/core';
 
-export default function Question1({setQuestion}) {
+export default function Question({setQuestion}) {
 
   const handleYes = () => {
     setQuestion('LiveInCouncilHome')
