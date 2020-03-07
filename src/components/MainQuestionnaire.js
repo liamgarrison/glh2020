@@ -7,6 +7,7 @@ import finaliseQuestionnaire from '../actions/finalise_questionnaire';
 export default function App () {
 
   const [question, setQuestion] = useState('Intro');
+  // const [question, setQuestion] = useState('Availability');
   const [questionData, setQuestionData] = useState({
     tenant: {
       name: '',
@@ -29,7 +30,8 @@ export default function App () {
       effects: ''
     },
     history: [],
-    defects: [] 
+    defects: [],
+    availability: [] 
   });
 
   const updateResponse = (path, value) => {

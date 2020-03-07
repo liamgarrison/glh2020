@@ -2,10 +2,14 @@ import React, {useState} from 'react';
 import {Button, Box, TextField, Typography, FormGroup} from '@material-ui/core';
 import QuestionTitle from '../misc/QuestionTitle';
 
-export default function Question({setQuestion, updateResponse, responses, onComplete}) {
+export default function Question({setQuestion, updateResponse, responses}) {
 
   const handleBack = () => {
     setQuestion('HistoryOfEvents');
+  };
+
+  const handleNext = () => {
+    setQuestion('Availability');
   };
 
   const emptyDefect = {
@@ -91,7 +95,7 @@ export default function Question({setQuestion, updateResponse, responses, onComp
         <Button variant="contained" color="secondary" onClick={handleBack}>
           Back
         </Button>
-        <Button variant="contained" color="secondary" onClick={onComplete}>
+        <Button variant="contained" color="secondary" onClick={handleNext}>
           Complete
         </Button>
       </Box>

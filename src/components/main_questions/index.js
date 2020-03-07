@@ -4,6 +4,7 @@ import LandlordDetails from './LandlordDetails';
 import DetailsOfIssue from './DetailsOfIssue';
 import HistoryOfEvents from './HistoryOfEvents';
 import ListOfDefects from './ListOfDefects';
+import Availability from './Availability';
 
 export default {
   Intro,
@@ -11,5 +12,6 @@ export default {
   LandlordDetails,
   DetailsOfIssue,
   HistoryOfEvents,
-  ListOfDefects
+  ListOfDefects,
+  Availability
 };
