@@ -1,11 +1,12 @@
 import React from 'react';
-import {Box, Typography} from '@material-ui/core';
+import {Box} from '@material-ui/core';
+import QuestionTitle from '../misc/QuestionTitle';
 
 export default function Question() {
   return (
     <Box>
-      <Typography>You need to follow the proceedings... link to legal clinic</Typography>
+      <QuestionTitle text="You need to follow the proceedings... link to legal clinic"/>
     </Box>
-  )
+  );
 }
 

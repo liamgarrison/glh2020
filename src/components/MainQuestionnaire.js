@@ -1,34 +1,47 @@
 import React, {useState} from 'react';
-
-import Intro from './main_questions/Intro'
-
-const questionMapping = {
-  Intro
-}
+import {set} from 'lodash';
+import mainQuestions from './main_questions';
+import QuestionCard from './misc/QuestionCard';
 
 export default function App () {
 
   const [question, setQuestion] = useState('Intro');
   const [questionData, setQuestionData] = useState({
-    name: ''
-  })
+    tenant: {
+      name: '',
+      address1: '',
+      address2: '',
+      address3: '',
+      city: '',
+      postcode: ''
+    },
+    landlord: {
+      name: '',
+      address1: '',
+      address2: '',
+      address3: '',
+      city: '',
+      postcode: ''
+    }
+  });
 
   const updateResponse = (path, value) => {
-    setQuestionData({
-      ...questionData,
-      [path]: value
-    })
-  }
+    setQuestionData(set({
+      ...questionData
+    }, path, value));
+  };
   
-  const Component = questionMapping[question];
+  const Component = mainQuestions[question];
 
-  console.table(questionData)
+  console.table(questionData);
   
   return (
-    <Component 
-      setQuestion={setQuestion}
-      updateResponse={updateResponse}
-      responses={questionData}
-    />
-  )
+    <QuestionCard>
+      <Component 
+        setQuestion={setQuestion}
+        updateResponse={updateResponse}
+        responses={questionData}
+      />
+    </QuestionCard>
+  );
 }

@@ -1,26 +1,23 @@
 import React from 'react';
 import {Button, Box, Typography} from '@material-ui/core';
+import QuestionTitle from '../misc/QuestionTitle';
 
-export default function Question() {
+export default function Question({setQuestion}) {
 
-  const handleYes = () => {
-  }
-
-  const handleNo = () => {
-  }
+  const handleContinue = () => {
+    setQuestion('TenantDetails');
+  };
 
   return (
     <Box>
-      <Typography variant="h2">Bit of background</Typography>
+      <QuestionTitle text="Bit of background"/>
+      <Typography>Explainer text about the process here</Typography>
       <Box>
-        <Button variant="contained" color="secondary" onClick={handleNo}>
-          No
-        </Button>
-        <Button variant="contained" color="secondary" onClick={handleYes}>
-          Yes
+        <Button variant="contained" color="secondary" onClick={handleContinue}>
+          Continue
         </Button>
       </Box>
     </Box>
-  )
+  );
 }
 

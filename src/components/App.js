@@ -1,17 +1,11 @@
 import React, {useState} from 'react';
 import {ThemeProvider, createMuiTheme} from '@material-ui/core/styles';
-import {Container} from '@material-ui/core'
-import QualificationQuestionnaire from './QualificationQuestionnaire'
-import MainQuestionnaire from './MainQuestionnaire'
-import purple from '@material-ui/core/colors/purple';
-import green from '@material-ui/core/colors/green';
-import Logo from '../images/logo.png';
+import {Container, Box} from '@material-ui/core';
+import QualificationQuestionnaire from './QualificationQuestionnaire';
+import MainQuestionnaire from './MainQuestionnaire';
+import Header from './misc/Header';
 
 const theme = createMuiTheme({
-  palette: {
-    primary: purple,
-    secondary: green,
-  },
   status: {
     danger: 'orange',
   },
@@ -21,24 +15,29 @@ const theme = createMuiTheme({
     ].join(','),
   },
   spacing: 8,
+  shadows: [
+    'none',
+    '0 3px 4px 0 rgba(0, 0, 0, 0.07), 0 3px 3px -2px rgba(0, 0, 0, 0.06), 0 1px 8px 0 rgba(0, 0, 0, 0.1)'
+  ]
 });
 
 export default function App () {
 
-  const [questionnaire, setQuestionnaire] = useState('QualificationQuestionnaire')
+  const [questionnaire, setQuestionnaire] = useState('QualificationQuestionnaire');
 
   const onCompleteQualificationQuestionnaire = () => {
-    setQuestionnaire('MainQuestionnaire')
-  }
+    setQuestionnaire('MainQuestionnaire');
+  };
 
   const onCompleteMainQuestionnaire = () => {
-    alert('Done!')
-  }
+    alert('Done!');
+  };
   
   return (
     <ThemeProvider theme={theme}>
+      <Box bgcolor="#cef0ff" height="100vh">
+        <Header/>
         <Container maxWidth="sm">
-          <img src={Logo}/>
           {questionnaire === 'QualificationQuestionnaire' && (
             <QualificationQuestionnaire onComplete={onCompleteQualificationQuestionnaire} />
           )}
@@ -46,7 +45,8 @@ export default function App () {
             <MainQuestionnaire onComplete={onCompleteMainQuestionnaire} />
           )}
         </Container>
+      </Box>
     </ThemeProvider>
 
-  )
+  );
 }

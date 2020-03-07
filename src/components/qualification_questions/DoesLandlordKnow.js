@@ -1,20 +1,21 @@
 import React from 'react';
-import {Button, Box, Typography} from '@material-ui/core';
+import {Button, Box} from '@material-ui/core';
+import QuestionTitle from '../misc/QuestionTitle';
 
 export default function Question({setQuestion}) {
 
   const handleYes = () => {
-    setQuestion('HasLandlordStartedProceedings')
-  }
+    setQuestion('HasLandlordStartedProceedings');
+  };
   
   const handleNo = () => {
-    setQuestion('PleaseContactLandlord')
-  }
+    setQuestion('PleaseContactLandlord');
+  };
 
   return (
     <Box>
-      <Typography variant="h2">Does the landlord know about the disrepair?</Typography>
-      <Box>
+      <QuestionTitle text="Does the landlord know about the disrepair?"/>
+      <Box display="flex" justifyContent="space-between">
         <Button variant="contained" color="secondary" onClick={handleNo}>
           No
         </Button>
@@ -23,6 +24,6 @@ export default function Question({setQuestion}) {
         </Button>
       </Box>
     </Box>
-  )
+  );
 }
 
