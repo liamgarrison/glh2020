@@ -5,11 +5,7 @@ import QuestionTitle from '../misc/QuestionTitle';
 import DateFnsUtils from '@date-io/date-fns';
 import 'date-fns';
 
-export default function Question({setQuestion, updateResponse, responses}) {
-
-  const handleContinue = () => {
-    // setQuestion('DamageHistory');
-  };
+export default function Question({setQuestion, updateResponse, responses, onComplete}) {
 
   const handleBack = () => {
     setQuestion('DetailsOfIssue');
@@ -74,8 +70,8 @@ export default function Question({setQuestion, updateResponse, responses}) {
         <Button variant="contained" color="secondary" onClick={handleBack}>
           Back
         </Button>
-        <Button variant="contained" color="secondary" onClick={handleContinue}>
-          Continue
+        <Button variant="contained" color="secondary" onClick={onComplete}>
+          Complete
         </Button>
       </Box>
     </Box>
