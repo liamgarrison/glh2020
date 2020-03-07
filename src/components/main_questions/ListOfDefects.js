@@ -96,7 +96,7 @@ export default function Question({setQuestion, updateResponse, responses}) {
           Back
         </Button>
         <Button variant="contained" color="secondary" onClick={handleNext}>
-          Complete
+          Next
         </Button>
       </Box>
     </Box>
