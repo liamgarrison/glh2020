@@ -7,16 +7,12 @@ export default function Question({setQuestion}) {
   const handleYes = () => {
     setQuestion('HasLandlordStartedProceedings');
   };
-  
-  const handleNo = () => {
-    setQuestion('PleaseContactLandlord');
-  };
 
   return (
     <Box>
       <QuestionTitle text="Does the landlord know about the disrepair?"/>
       <Box display="flex" justifyContent="space-between">
-        <Button variant="contained" color="secondary" onClick={handleNo}>
+        <Button variant="contained" color="secondary">
           No
         </Button>
         <Button variant="contained" color="secondary" onClick={handleYes}>

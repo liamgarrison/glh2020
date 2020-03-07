@@ -1,14 +1,17 @@
 import React, {useState} from 'react';
 import {Button, Box, TextField, Typography} from '@material-ui/core';
-import {KeyboardDatePicker, MuiPickersUtilsProvider} from '@material-ui/pickers';
+import {KeyboardDatePicker} from '@material-ui/pickers';
 import QuestionTitle from '../misc/QuestionTitle';
-import DateFnsUtils from '@date-io/date-fns';
-import 'date-fns';
+import {format} from 'date-fns';
 
-export default function Question({setQuestion, updateResponse, responses, onComplete}) {
+export default function Question({setQuestion, updateResponse, responses}) {
 
   const handleBack = () => {
     setQuestion('DetailsOfIssue');
+  };
+
+  const handleNext = () => {
+    setQuestion('ListOfDefects');
   };
 
   const emptyEvent = {
@@ -27,30 +30,31 @@ export default function Question({setQuestion, updateResponse, responses, onComp
     <Box>
       <QuestionTitle text="History of events"/>
       <Box mb={4}>
-        {responses.history.map(historyEvent => (
-          <Box key={historyEvent.date.toString()} display="flex" justifyContent="space-between">
-            <Typography>{historyEvent.date.toString()} {historyEvent.description}</Typography>
-          </Box>
-        ))}
-        <Typography>Add new event</Typography>
+        <Box  mb={4}>
+          {responses.history.map(historyEvent => (
+            <Box key={historyEvent.date.toString()} display="flex" justifyContent="space-between">
+              <Typography>{format(historyEvent.date, 'MM/dd/yyyy')} {historyEvent.description}</Typography>
+            </Box>
+          ))}
+
+        </Box>
+        <Typography mb={4}>Add new event</Typography>
         <Box display="flex" justifyContent="space-between">
-          <MuiPickersUtilsProvider utils={DateFnsUtils}>
-            <KeyboardDatePicker
-              disableToolbar
-              variant="inline"
-              format="MM/dd/yyyy"
-              margin="normal"
-              label="Date of event"
-              value={newEvent.date}
-              onChange={date => setNewEvent({
-                ...newEvent,
-                date
-              })}
-              KeyboardButtonProps={{
-                'aria-label': 'change date',
-              }}
-            />
-          </MuiPickersUtilsProvider>
+          <KeyboardDatePicker
+            disableToolbar
+            variant="inline"
+            format="MM/dd/yyyy"
+            margin="normal"
+            label="Date of event"
+            value={newEvent.date}
+            onChange={date => setNewEvent({
+              ...newEvent,
+              date
+            })}
+            KeyboardButtonProps={{
+              'aria-label': 'change date',
+            }}
+          />
           <TextField
             label="Description"
             variant="outlined"
@@ -70,8 +74,8 @@ export default function Question({setQuestion, updateResponse, responses, onComp
         <Button variant="contained" color="secondary" onClick={handleBack}>
           Back
         </Button>
-        <Button variant="contained" color="secondary" onClick={onComplete}>
-          Complete
+        <Button variant="contained" color="secondary" onClick={handleNext}>
+          Next
         </Button>
       </Box>
     </Box>

@@ -8,15 +8,11 @@ export default function Question({setQuestion}) {
     setQuestion('DoesLandlordKnow');
   };
 
-  const handleNo = () => {
-    setQuestion('RightToRepair');
-  };
-
   return (
     <Box>
       <QuestionTitle text="Would the damage cost more than £250 to repair?"/>
       <Box display="flex" justifyContent="space-between">
-        <Button variant="contained" color="secondary" onClick={handleNo}>
+        <Button variant="contained" color="secondary">
           No
         </Button>
         <Button variant="contained" color="secondary" onClick={handleYes}>

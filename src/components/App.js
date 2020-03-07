@@ -4,6 +4,9 @@ import {Container, Box} from '@material-ui/core';
 import QualificationQuestionnaire from './QualificationQuestionnaire';
 import MainQuestionnaire from './MainQuestionnaire';
 import Header from './misc/Header';
+import DateFnsUtils from '@date-io/date-fns';
+import 'date-fns';
+import {MuiPickersUtilsProvider} from '@material-ui/pickers';
 
 const theme = createMuiTheme({
   status: {
@@ -24,6 +27,7 @@ const theme = createMuiTheme({
 export default function App () {
 
   const [questionnaire, setQuestionnaire] = useState('QualificationQuestionnaire');
+  // const [questionnaire, setQuestionnaire] = useState('MainQuestionnaire');
 
   const onCompleteQualificationQuestionnaire = () => {
     setQuestionnaire('MainQuestionnaire');
@@ -35,17 +39,19 @@ export default function App () {
   
   return (
     <ThemeProvider theme={theme}>
-      <Box bgcolor="#cef0ff" minHeight="100vh" pb={8}>
-        <Header/>
-        <Container maxWidth="sm">
-          {questionnaire === 'QualificationQuestionnaire' && (
-            <QualificationQuestionnaire onComplete={onCompleteQualificationQuestionnaire} />
-          )}
-          {questionnaire === 'MainQuestionnaire' && (
-            <MainQuestionnaire onComplete={onCompleteMainQuestionnaire} />
-          )}
-        </Container>
-      </Box>
+      <MuiPickersUtilsProvider utils={DateFnsUtils}>
+        <Box bgcolor="#cef0ff" minHeight="100vh" pb={8}>
+          <Header/>
+          <Container maxWidth="sm">
+            {questionnaire === 'QualificationQuestionnaire' && (
+              <QualificationQuestionnaire onComplete={onCompleteQualificationQuestionnaire} />
+            )}
+            {questionnaire === 'MainQuestionnaire' && (
+              <MainQuestionnaire onComplete={onCompleteMainQuestionnaire} />
+            )}
+          </Container>
+        </Box>
+      </MuiPickersUtilsProvider>
     </ThemeProvider>
 
   );
