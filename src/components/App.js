@@ -57,6 +57,11 @@ const theme = createMuiTheme({
       }
     },
   },
+  palette: {
+    primary: {
+      main: '#0082ba'
+    }
+  }
 });
 
 export default function App () {

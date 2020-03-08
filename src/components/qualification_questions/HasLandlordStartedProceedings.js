@@ -11,8 +11,8 @@ export default function Question({setQuestion}) {
 
   return (
     <Box>
-      <QuestionTitle text="Has the landlord started proceedings?"/>
-      <ExplanatoryNote text="This will be when the landlord has sent you a letter of claim. This is a letter that officially puts you on notice that court proceedings may be brought against you." mb={4}/>
+      <QuestionTitle text="Has the landlord sent you a letter mentioning court?"/>
+      <ExplanatoryNote text="This is often referred to as a letter of claim. Its purpose is to inform you that legal action may be brought against you." mb={4}/>
       <Box display="flex" justifyContent="space-around">
         <Button variant="contained" color="primary" onClick={handleNo} size="large">
          No

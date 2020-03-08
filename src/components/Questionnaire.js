@@ -16,6 +16,10 @@ export default function Questionnaire () {
   const onCompleteMainQuestionnaire = () => {
     alert('Done!');
   };
+
+  const onRestart = () => {
+    setQuestionnaire('QualificationQuestionnaire');
+  };
   return (
     <Box py={8} flexGrow={1} bgcolor="#cef0ff">
       <Container maxWidth="md">
@@ -23,7 +27,7 @@ export default function Questionnaire () {
           <QualificationQuestionnaire onComplete={onCompleteQualificationQuestionnaire} />
         )}
         {questionnaire === 'MainQuestionnaire' && (
-          <MainQuestionnaire onComplete={onCompleteMainQuestionnaire} />
+          <MainQuestionnaire onComplete={onCompleteMainQuestionnaire} onRestart={onRestart} />
         )}
       </Container>
     </Box>

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Box} from '@material-ui/core';
+import {Button, Box, Typography} from '@material-ui/core';
 import QuestionTitle from '../misc/QuestionTitle';
 
 export default function Question({setQuestion}) {
@@ -11,6 +11,9 @@ export default function Question({setQuestion}) {
   return (
     <Box>
       <QuestionTitle text="Do you need to provide additional documents?"/>
+      <Typography gutterBottom>
+          These could be documents that support your claim, e.g. GP letters, cost estimates.
+      </Typography>
       <Box display="flex" justifyContent="space-around">
         <Button variant="contained" color="primary" onClick={handleNo} size="large" >
           No

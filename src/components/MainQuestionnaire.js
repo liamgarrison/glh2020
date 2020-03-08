@@ -4,7 +4,7 @@ import mainQuestions from './main_questions';
 import QuestionCard from './misc/QuestionCard';
 import finaliseQuestionnaire from '../actions/finalise_questionnaire';
 
-export default function App () {
+export default function App ({onRestart}) {
 
   const [question, setQuestion] = useState('Intro');
   const [questionData, setQuestionData] = useState({
@@ -54,6 +54,7 @@ export default function App () {
         updateResponse={updateResponse}
         responses={questionData}
         downloadDocument={downloadDocument}
+        onRestart={onRestart}
       />
     </QuestionCard>
   );

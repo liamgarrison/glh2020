@@ -30,10 +30,10 @@ export default function Question({setQuestion, updateResponse, responses}) {
 
   return (
     <Box>
-      <QuestionTitle text="List of defects"/>
+      <QuestionTitle text="Specific problems in the property"/>
       <Box mb={4}>
         <Typography gutterBottom>
-          Please add all defects that are present at the property, as well as any personal items that have been damaged as a result of the disrepairs. For personal items, please list them individually, specifying where you bought them and when it was bought. For example, "The floorboard" or "Laptop from May 2017".
+          Please add all the specifics about any damage that has been caused. This could be damage to the property or to your personal items. Please be as specific as possible.
         </Typography>
       </Box>
       <Box mb={4}>
@@ -42,7 +42,7 @@ export default function Question({setQuestion, updateResponse, responses}) {
             <Typography 
               variant="h4"
             >
-          Defects
+          Specific problems
             </Typography>
           </Box>
         )}
@@ -74,10 +74,9 @@ export default function Question({setQuestion, updateResponse, responses}) {
         )}
         <Box mb={4} p={4} border={1} borderRadius={4}>
           <Box mb={2}>
-            <Typography variant="h4" mb={4}>Add new defect</Typography>
             <FormGroup>
               <TextField
-                label="Item"
+                label="Item e.g. mould on the wall"
                 variant="outlined"
                 onChange={e => setNewDefect({
                   ...newDefect,
@@ -89,7 +88,7 @@ export default function Question({setQuestion, updateResponse, responses}) {
             </FormGroup>     
             <FormGroup>
               <TextField
-                label="Room"
+                label="Room e.g. bedroom"
                 variant="outlined"
                 onChange={e => setNewDefect({
                   ...newDefect,
@@ -101,7 +100,7 @@ export default function Question({setQuestion, updateResponse, responses}) {
             </FormGroup>        
             <FormGroup>
               <TextField
-                label="Extent of damage"
+                label="Extent of damage e.g. top right corner near window"
                 variant="outlined"
                 onChange={e => setNewDefect({
                   ...newDefect,
@@ -113,7 +112,7 @@ export default function Question({setQuestion, updateResponse, responses}) {
             </FormGroup>
             <FormGroup>
               <TextField
-                label="Inconvenience suffered"
+                label="Inconvenience suffered e.g. cough is getting worse, damage to clothes"
                 variant="outlined"
                 onChange={e => setNewDefect({
                   ...newDefect,
@@ -125,7 +124,7 @@ export default function Question({setQuestion, updateResponse, responses}) {
             </FormGroup>
             <FormGroup>
               <TextField
-                label="Cost of repair"
+                label="Cost of repair e.g unsure - ~£300"
                 variant="outlined"
                 onChange={e => setNewDefect({
                   ...newDefect,

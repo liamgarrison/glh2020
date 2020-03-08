@@ -30,7 +30,7 @@ export default function Home () {
         <Box flexGrow={1} className={classes.dark}>
           <Container maxWidth="md">
             <Box py={24}>
-              <Typography gutterBottom variant="h1" className={classes.white} >Resolve disrepair disputes with your landlord now</Typography>
+              <Typography gutterBottom variant="h1" className={classes.white} >Resolve disrepair issues with your landlord</Typography>
               <Typography gutterBottom variant="h3" className={classes.white} >Our easy-to-use questionnaire helps you navigate the legal process that needs to be followed before filing a claim.</Typography>
               <Button variant="contained" color="primary" onClick={() => history.push('/questionnaire')} size="large">
                 Get started
@@ -51,7 +51,7 @@ export default function Home () {
 
             </Typography>
             <Typography gutterBottom>
-          Tenant Action is a platform that helps you when you have damage to your property and your landlord has not repaired it or refuses to do so. It helps you through the steps you need to go through before filing a legal claim against your landlord and offer you guidance on the steps that follow.  
+          Tenant Action is a platform that helps you when you have damage to the property and your landlord has not repaired it or refuses to do so. It helps you through the steps you need to go through before filing a legal claim against your landlord and offer you guidance on the steps that follow.  
             </Typography>
             <Typography variant="h3">
           Why do you have to follow specific steps? 

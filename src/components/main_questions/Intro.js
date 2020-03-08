@@ -1,8 +1,8 @@
 import React from 'react';
-import {Button, Box, Typography} from '@material-ui/core';
+import {Button, Box, Typography, Link} from '@material-ui/core';
 import QuestionTitle from '../misc/QuestionTitle';
 
-export default function Question({setQuestion}) {
+export default function Question({setQuestion, onRestart}) {
 
   const handleContinue = () => {
     setQuestion('TenantDetails');
@@ -10,12 +10,15 @@ export default function Question({setQuestion}) {
 
   return (
     <Box>
-      <QuestionTitle text="Introduction"/>
+      <QuestionTitle text="Generate a letter to your landlord"/>
       <Box mb={5}>
-        <Typography gutterBottom>We will now go through some questions to populate a letter that you can send to your landlord.</Typography>
-        <Typography gutterBottom>This letter is required by the protocol and can then lead to you starting alternative dispute resolution / court proceedings if the issue does not get resolved.</Typography>
+        <Typography gutterBottom>This letter will contain all the issues that are currently present in the property. Using our template will ensure the information is clearly detailed in the correct format.</Typography>
+        <Typography gutterBottom>If your issue needs to go to court or requires <Link target="_blank" rel="noopener noreferrer" href="https://england.shelter.org.uk/legal/housing_options/deposits/statutory_protection_of_deposits/return_of_the_deposit/dispute_resolution">alternative dispute resolution</Link>, this letter is required to show that you have properly informed your landlord about the issues.</Typography>
       </Box>
-      <Box display="flex" justifyContent="flex-end">
+      <Box display="flex" justifyContent="space-between">
+        <Button color="primary" onClick={onRestart}>
+          Retake screening questions
+        </Button>
         <Button variant="contained" color="primary" onClick={handleContinue}>
           Continue
         </Button>

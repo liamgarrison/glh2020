@@ -11,9 +11,9 @@ export default function Question({setQuestion, downloadDocument}) {
 
   return (
     <Box>
-      <QuestionTitle text="Your document is ready!"/>
+      <QuestionTitle text="Your document is ready"/>
       <Box mb={2}>
-        <Typography>Clicking download below will generate a Microsoft Word document that you can send to your landlord.</Typography>
+        <Typography>Click download to access your completed letter that you can send to your landlord.</Typography>
       </Box>
       <Box display="flex" justifyContent="center">
         <Button variant="contained" color="primary" onClick={handleClick}>

@@ -14,7 +14,7 @@ export default function Question({setQuestion, updateResponse, responses}) {
 
   return (
     <Box>
-      <QuestionTitle text="Please enter the tenant's details"/>
+      <QuestionTitle text="Please enter your details"/>
       <Box mb={4}>
         <FormGroup>
           <TextField 

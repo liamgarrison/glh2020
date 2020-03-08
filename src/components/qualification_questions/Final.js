@@ -10,7 +10,7 @@ export default function Question({onComplete, setQuestion}) {
 
   return (
     <Box>
-      <QuestionTitle text="Thank you for answering those questions"/>
+      <QuestionTitle text="You can"/>
       <Box mb={5}>
         <Typography>You meet the criteria to proceed to the next step. We can now help you generate your letter.</Typography>
       </Box>

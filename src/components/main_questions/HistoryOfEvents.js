@@ -28,13 +28,13 @@ export default function Question({setQuestion, updateResponse, responses}) {
 
   return (
     <Box>
-      <QuestionTitle text="Communication history"/>
+      <QuestionTitle text="History of the issue"/>
       <Box mb={4}>
         <Typography gutterBottom>
-          Please add a complete history of the events and communication surrounding the issue.
+          Take us through the issue step by step by adding relevant events below. For each event, you will need to provide an approximate date.
         </Typography>
         <Typography>
-          Example:
+          Examples:
         </Typography>
         <Typography>
           03/03/2020 - I first noticed the leak
@@ -63,9 +63,6 @@ export default function Question({setQuestion, updateResponse, responses}) {
         </Box>
       )}
       <Box mb={4} p={4} border={1} borderRadius={4}>
-        <Typography variant="h4">
-          Add event
-        </Typography>
         <Box mb={2}>
           <FormGroup>
             <KeyboardDatePicker
@@ -86,7 +83,7 @@ export default function Question({setQuestion, updateResponse, responses}) {
           <FormGroup>
             <TextField
               label="Description"
-              variant="outlined"
+              // variant="outlined"
               onChange={e => setNewEvent({
                 ...newEvent,
                 description: e.target.value

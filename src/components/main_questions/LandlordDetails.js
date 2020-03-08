@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Box, FormGroup, TextField} from '@material-ui/core';
+import {Button, Box, FormGroup, TextField, Typography} from '@material-ui/core';
 import QuestionTitle from '../misc/QuestionTitle';
 
 export default function Question({setQuestion, updateResponse, responses}) {
@@ -14,7 +14,8 @@ export default function Question({setQuestion, updateResponse, responses}) {
 
   return (
     <Box>
-      <QuestionTitle text="Please enter the details for your landlord"/>
+      <QuestionTitle text="Please enter your landlord's details"/>
+      <Typography gutterBottom>{"Your landlord's details will be available on your tenancy agreement."}</Typography>
       <Box mb={4}>
         <FormGroup>
           <TextField 

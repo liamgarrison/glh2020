@@ -17,7 +17,7 @@ export default function Question({setQuestion, updateResponse, responses}) {
       <QuestionTitle text="Issue details"/>
       <Box mb={2}>
         <Typography>
-          These questions relate to the disrepairs you are experiencing in your property. You will be asked to list out the specific defects in a later question. 
+          Please provide a summary of the issues that are present at the property. In the next section you will have the opportunity to provide specific details.
         </Typography>
       </Box>
       <Box mb={4}>

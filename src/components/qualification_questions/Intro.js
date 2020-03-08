@@ -17,9 +17,9 @@ export default function Question({setQuestion}) {
 
   return (
     <Box>
-      <QuestionTitle text="Welcome"/>
+      <QuestionTitle text="Getting started"/>
       <Box mb={4}>
-        <Typography>Please answer the following yes or no questions to help us confirm whether this is the right process for you.  </Typography>
+        <Typography>Please answer the following yes or no questions to help us understand your situation.</Typography>
       </Box>
       <Box display="flex" justifyContent="space-between">
         <Button color="primary" onClick={handleBack}>

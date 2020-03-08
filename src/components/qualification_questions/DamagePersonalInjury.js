@@ -3,26 +3,18 @@ import {Button, Box} from '@material-ui/core';
 import QuestionTitle from '../misc/QuestionTitle';
 import ExplanatoryNote from '../misc/ExplanatoryNote';
 
-export default function Question({setQuestion}) {
-
-  const handleYes = () => {
-  };
-
-  const handleNo = () => {
-    setQuestion('Final');
-  };
+export default function Question({onComplete}) {
 
   return (
     <Box>
-      <QuestionTitle text="Has the damage caused personal injury to you or others"/>
-      <ExplanatoryNote text="If you have a minor medical condition which is caused or exacerbated by conditions within the property, you can claim compensation through this process.
-        For example, suffering with breathing difficulties or asthma as a result of living in a damp or mould affected property would fall within the scope. Personal injury claims attached to housing disrepair must be proved by a GP’s letter."
-      mb={4}/>
+      <QuestionTitle text="Has the issue caused any minor health problems?"/>
+      <ExplanatoryNote text="For example, if you have found it harder to breathe because of mould, you can claim money through this process. This will need to be supported by your GP."
+        mb={4}/>
       <Box display="flex" justifyContent="space-around">
-        <Button variant="contained" color="primary" onClick={handleNo} size="large">
+        <Button variant="contained" color="primary" onClick={onComplete} size="large">
           No
         </Button>
-        <Button variant="contained" color="primary" onClick={handleYes} size="large">
+        <Button variant="contained" color="primary" size="large">
           Yes
         </Button>
       </Box>

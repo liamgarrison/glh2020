@@ -50,7 +50,12 @@ export default function Question({setQuestion, updateResponse, responses}) {
 
   return (
     <Box>
-      <QuestionTitle text="Please list your availability for the landlord to visit"/>
+      <QuestionTitle text="When are you home?"/>
+      <Box mb={4}>
+        <Typography gutterBottom>
+          Please add some times when you will be available for the landlord to visit the property.
+        </Typography>
+      </Box>
       <Box mb={4}>
         {responses.availability.length > 0 && (
           <Box mb={2}>
