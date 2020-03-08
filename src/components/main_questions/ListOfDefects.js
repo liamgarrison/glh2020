@@ -15,10 +15,10 @@ export default function Question({setQuestion, updateResponse, responses}) {
   const emptyDefect = {
     item: '',
     room: '',
-    extendOfDamage: '',
+    extentOfDamage: '',
     inconvenienceSuffered: '',
     costOfRepair: '',
-    photo: null
+    photo: ''
   };
   
   const [newDefect, setNewDefect] = useState(emptyDefect);
@@ -63,7 +63,7 @@ export default function Question({setQuestion, updateResponse, responses}) {
                   <TableRow key={defect.item}>
                     <TableCell>{defect.item || <>&ndash;</>}</TableCell>
                     <TableCell>{defect.room || <>&ndash;</>}</TableCell>
-                    <TableCell>{defect.extendOfDamage || <>&ndash;</>}</TableCell>
+                    <TableCell>{defect.extentOfDamage || <>&ndash;</>}</TableCell>
                     <TableCell>{defect.inconvenienceSuffered || <>&ndash;</>}</TableCell>
                     <TableCell>{defect.costOfRepair || <>&ndash;</>}</TableCell>
                   </TableRow>
@@ -105,9 +105,9 @@ export default function Question({setQuestion, updateResponse, responses}) {
                 variant="outlined"
                 onChange={e => setNewDefect({
                   ...newDefect,
-                  extendOfDamage: e.target.value
+                  extentOfDamage: e.target.value
                 })}
-                value={newDefect.extendOfDamage}
+                value={newDefect.extentOfDamage}
                 margin="normal"
               />
             </FormGroup>
