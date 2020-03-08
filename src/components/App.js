@@ -24,21 +24,25 @@ const theme = createMuiTheme({
       'sans-serif',
     ].join(','),
     h1: {
-      fontSize: 40,
+      fontSize: 42,
       fontWeight: 'bold',
+      lineHeight: 1.5
     },
     h2: {
-      fontSize: 32,
+      fontSize: 36,
+      lineHeight: 1.5
     },
     h3: {
-      fontSize: 26,
+      fontSize: 28,
       lineHeight: 1.5
     },
     h4: {
       fontSize: 22,
+      lineHeight: 1.5
     },
     h5: {
       fontSize: 18,
+      lineHeight: 1.5
     },
   },
   spacing: 8,
@@ -49,7 +53,7 @@ const theme = createMuiTheme({
   overrides: {
     MuiTypography: {
       gutterBottom: {
-        marginBottom: '1.6em'
+        marginBottom: '1.2em'
       }
     },
   },
