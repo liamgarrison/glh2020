@@ -9,7 +9,7 @@ export default function Home () {
     <Container maxWidth="md">
       <Box py={8}>
         <Typography gutterBottom variant="h1">Resolve disrepair disputes with your landlord now</Typography>
-        <Typography gutterBottom variant="h3">Our easy-to-use questionnaire helps you generate the documents you need to get things fixed quickly</Typography>
+        <Typography gutterBottom variant="h3">Our easy-to-use questionnaire helps you navigate the legal process that needs to be followed before filing a claim.</Typography>
         <Button variant="contained" color="secondary" onClick={() => history.push('/questionnaire')}>
             Get started
         </Button>
