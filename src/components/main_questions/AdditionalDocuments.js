@@ -11,11 +11,11 @@ export default function Question({setQuestion}) {
   return (
     <Box>
       <QuestionTitle text="Do you need to provide additional documents?"/>
-      <Box display="flex" justifyContent="space-between">
-        <Button variant="contained" color="secondary" onClick={handleNo}>
+      <Box display="flex" justifyContent="space-around">
+        <Button variant="contained" color="primary" onClick={handleNo} size="large" >
           No
         </Button>
-        <Button variant="contained" color="secondary">
+        <Button variant="contained" color="primary" size="large">
           Yes
         </Button>
       </Box>

@@ -4,7 +4,7 @@ import QuestionCard from './misc/QuestionCard';
 
 export default function QualificationQuestionnaire ({onComplete}) {
 
-  const [question, setQuestion] = useState('LiveInEngland');
+  const [question, setQuestion] = useState('Intro');
   
   const Component = qualificationQuestions[question];
   

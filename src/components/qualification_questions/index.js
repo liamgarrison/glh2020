@@ -1,3 +1,4 @@
+import Intro from './Intro';
 import LiveInCouncilHome from './LiveInCouncilHome';
 import LiveInEngland from './LiveInEngland';
 import DamageCost from './DamageCost';
@@ -10,6 +11,7 @@ import DamagePersonalInjury from './DamagePersonalInjury';
 import Final from './Final';
 
 export default {
+  Intro,
   LiveInCouncilHome,
   LiveInEngland,
   DamageCost,

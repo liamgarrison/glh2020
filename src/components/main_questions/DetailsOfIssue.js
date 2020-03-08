@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Box, FormGroup, TextField} from '@material-ui/core';
+import {Button, Box, FormGroup, TextField, Typography} from '@material-ui/core';
 import QuestionTitle from '../misc/QuestionTitle';
 
 export default function Question({setQuestion, updateResponse, responses}) {
@@ -14,34 +14,41 @@ export default function Question({setQuestion, updateResponse, responses}) {
 
   return (
     <Box>
-      <QuestionTitle text="Details of your issue"/>
+      <QuestionTitle text="Issue details"/>
+      <Box mb={2}>
+        <Typography>
+          These questions relate to the disrepairs you are experiencing in your property. You will be asked to list out the specific defects in a later question. 
+        </Typography>
+      </Box>
       <Box mb={4}>
         <FormGroup>
           <TextField 
-            label="Briefly summarise the issue (200 characters)"
+            label="Briefly summarise the issue"
             multiline={true}
             rows="4"
             variant="outlined"
             onChange={e => updateResponse('issue.summary', e.target.value)}
             value={responses.issue.summary}
             margin="normal"
+            helperText="200 character limit"
           />
           <TextField 
-            label="Briefly explain what effects the issue has had on you (200 characters)"
+            label="Briefly explain what effects the issue has had on you"
             variant="outlined"
             multiline={true}
             rows="4"
             onChange={e => updateResponse('issue.effects', e.target.value)}
             value={responses.issue.effects}
             margin="normal"
+            helperText="200 character limit"
           />
         </FormGroup>
       </Box>
       <Box display="flex" justifyContent="space-between">
-        <Button variant="contained" color="secondary" onClick={handleBack}>
+        <Button color="primary" onClick={handleBack}>
           Back
         </Button>
-        <Button variant="contained" color="secondary" onClick={handleContinue}>
+        <Button variant="contained" color="primary" onClick={handleContinue}>
           Continue
         </Button>
       </Box>

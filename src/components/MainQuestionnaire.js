@@ -7,7 +7,6 @@ import finaliseQuestionnaire from '../actions/finalise_questionnaire';
 export default function App () {
 
   const [question, setQuestion] = useState('Intro');
-  // const [question, setQuestion] = useState('Availability');
   const [questionData, setQuestionData] = useState({
     tenant: {
       name: '',
@@ -40,7 +39,7 @@ export default function App () {
     }, path, value));
   };
 
-  const onComplete = () => {
+  const downloadDocument = () => {
     return finaliseQuestionnaire(questionData);
   };
   
@@ -54,7 +53,7 @@ export default function App () {
         setQuestion={setQuestion}
         updateResponse={updateResponse}
         responses={questionData}
-        onComplete={onComplete}
+        downloadDocument={downloadDocument}
       />
     </QuestionCard>
   );

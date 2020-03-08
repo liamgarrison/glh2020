@@ -14,7 +14,7 @@ export default function Question({setQuestion, updateResponse, responses}) {
 
   return (
     <Box>
-      <QuestionTitle text="Landlord details"/>
+      <QuestionTitle text="Please enter the details for your landlord"/>
       <Box mb={4}>
         <FormGroup>
           <TextField 
@@ -62,10 +62,10 @@ export default function Question({setQuestion, updateResponse, responses}) {
         </FormGroup>
       </Box>
       <Box display="flex" justifyContent="space-between">
-        <Button variant="contained" color="secondary" onClick={handleBack}>
+        <Button color="primary" onClick={handleBack}>
           Back
         </Button>
-        <Button variant="contained" color="secondary" onClick={handleContinue}>
+        <Button variant="contained" color="primary" onClick={handleContinue}>
           Continue
         </Button>
       </Box>

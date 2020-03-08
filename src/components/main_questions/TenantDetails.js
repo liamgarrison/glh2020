@@ -8,9 +8,13 @@ export default function Question({setQuestion, updateResponse, responses}) {
     setQuestion('LandlordDetails');
   };
 
+  const handleBack = () => {
+    setQuestion('Intro');
+  };
+
   return (
     <Box>
-      <QuestionTitle text="Tenant details"/>
+      <QuestionTitle text="Please enter the tenant's details"/>
       <Box mb={4}>
         <FormGroup>
           <TextField 
@@ -57,8 +61,11 @@ export default function Question({setQuestion, updateResponse, responses}) {
           />
         </FormGroup>
       </Box>
-      <Box display="flex" justifyContent="flex-end">
-        <Button variant="contained" color="secondary" onClick={handleContinue}>
+      <Box display="flex" justifyContent="space-between">
+        <Button color="primary" onClick={handleBack}>
+          Back
+        </Button>
+        <Button variant="contained" color="primary" onClick={handleContinue}>
           Continue
         </Button>
       </Box>

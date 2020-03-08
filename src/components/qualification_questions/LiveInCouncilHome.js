@@ -15,11 +15,11 @@ export default function Question({setQuestion}) {
   return (
     <Box>
       <QuestionTitle text="Do you live in a council home?"/>
-      <Box display="flex" justifyContent="space-between">
-        <Button variant="contained" color="secondary" onClick={handleNo}>
+      <Box display="flex" justifyContent="space-around">
+        <Button variant="contained" color="primary" onClick={handleNo} size="large">
           No
         </Button>
-        <Button variant="contained" color="secondary" onClick={handleYes}>
+        <Button variant="contained" color="primary" onClick={handleYes} size="large">
           Yes
         </Button>
       </Box>

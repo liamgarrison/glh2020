@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Box} from '@material-ui/core';
+import {Button, Box, Typography} from '@material-ui/core';
 import QuestionTitle from '../misc/QuestionTitle';
 
 export default function Question({setQuestion, downloadDocument}) {
@@ -12,9 +12,12 @@ export default function Question({setQuestion, downloadDocument}) {
   return (
     <Box>
       <QuestionTitle text="Your document is ready!"/>
-      <Box display="flex" justifyContent="space-between">
-        <Button variant="contained" color="secondary" onClick={handleClick}>
-          Download
+      <Box mb={2}>
+        <Typography>Clicking download below will generate a Microsoft Word document that you can send to your landlord.</Typography>
+      </Box>
+      <Box display="flex" justifyContent="center">
+        <Button variant="contained" color="primary" onClick={handleClick}>
+            Download
         </Button>
       </Box>
     </Box>

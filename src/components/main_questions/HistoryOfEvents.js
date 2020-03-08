@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import {Button, Box, TextField, Typography} from '@material-ui/core';
+import {Button, Box, TextField, Typography, FormGroup} from '@material-ui/core';
 import {KeyboardDatePicker} from '@material-ui/pickers';
 import QuestionTitle from '../misc/QuestionTitle';
-import {format} from 'date-fns';
+import moment from 'moment';
 
 export default function Question({setQuestion, updateResponse, responses}) {
 
@@ -28,53 +28,85 @@ export default function Question({setQuestion, updateResponse, responses}) {
 
   return (
     <Box>
-      <QuestionTitle text="History of events"/>
+      <QuestionTitle text="Communication history"/>
       <Box mb={4}>
-        <Box  mb={4}>
+        <Typography gutterBottom>
+          Please add a complete history of the events and communication surrounding the issue.
+        </Typography>
+        <Typography>
+          Example:
+        </Typography>
+        <Typography>
+          03/03/2020 - I first noticed the leak
+        </Typography>
+        <Typography>
+          06/03/2020 - I contacted Paul the landlord about it
+        </Typography>
+      </Box>
+      {responses.history.length > 0 && (
+        <Box mb={2}>
+          <Typography 
+            variant="h4"
+          >
+          Events
+          </Typography>
+        </Box>
+      )}
+      {responses.history.length > 0 && (
+        <Box mb={4}>
           {responses.history.map(historyEvent => (
             <Box key={historyEvent.date.toString()} display="flex" justifyContent="space-between">
-              <Typography>{format(historyEvent.date, 'MM/dd/yyyy')} {historyEvent.description}</Typography>
+              <Typography>{moment(historyEvent.date).format('DD/MM/YYYY')} - {historyEvent.description}</Typography>
             </Box>
           ))}
 
         </Box>
-        <Typography mb={4}>Add new event</Typography>
-        <Box display="flex" justifyContent="space-between">
-          <KeyboardDatePicker
-            disableToolbar
-            variant="inline"
-            format="MM/dd/yyyy"
-            margin="normal"
-            label="Date of event"
-            value={newEvent.date}
-            onChange={date => setNewEvent({
-              ...newEvent,
-              date
-            })}
-            KeyboardButtonProps={{
-              'aria-label': 'change date',
-            }}
-          />
-          <TextField
-            label="Description"
-            variant="outlined"
-            onChange={e => setNewEvent({
-              ...newEvent,
-              description: e.target.value
-            })}
-            value={newEvent.description}
-            margin="normal"
-          />
+      )}
+      <Box mb={4} p={4} border={1} borderRadius={4}>
+        <Typography variant="h4">
+          Add event
+        </Typography>
+        <Box mb={2}>
+          <FormGroup>
+            <KeyboardDatePicker
+              disableToolbar
+              format="DD/MM/YYYY"
+              margin="normal"
+              label="Date"
+              value={newEvent.date}
+              onChange={date => setNewEvent({
+                ...newEvent,
+                date
+              })}
+              KeyboardButtonProps={{
+                'aria-label': 'change date',
+              }}
+            />
+          </FormGroup>
+          <FormGroup>
+            <TextField
+              label="Description"
+              variant="outlined"
+              onChange={e => setNewEvent({
+                ...newEvent,
+                description: e.target.value
+              })}
+              value={newEvent.description}
+              margin="normal"
+            />
+          </FormGroup>
         </Box>
-        <Button variant="contained" color="primary" onClick={onAddEvent}>
+        <Box display="flex" justifyContent="flex-end">
+          <Button variant="contained" color="primary" onClick={onAddEvent}>
           Add
-        </Button>
+          </Button>
+        </Box>
       </Box>
       <Box display="flex" justifyContent="space-between">
-        <Button variant="contained" color="secondary" onClick={handleBack}>
+        <Button color="primary" onClick={handleBack}>
           Back
         </Button>
-        <Button variant="contained" color="secondary" onClick={handleNext}>
+        <Button variant="contained" color="primary" onClick={handleNext}>
           Next
         </Button>
       </Box>
