@@ -20,7 +20,8 @@ moment.locale("en-gb"); // it is required to select default locale manually
 const theme = createMuiTheme({
   typography: {
     fontFamily: [
-      '"Helvetica Neue"',
+      "Arial",
+      'sans-serif',
     ].join(','),
     h1: {
       fontSize: 40,
