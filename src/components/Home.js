@@ -51,7 +51,7 @@ export default function Home () {
 
             </Typography>
             <Typography gutterBottom>
-          Tenant Action is a platform that helps you when you have damage to the property and your landlord has not repaired it or refuses to do so. It helps you through the steps you need to go through before filing a legal claim against your landlord and offer you guidance on the steps that follow.  
+          Tenant Action is a platform that helps you when you have damage to the property and your landlord has not repaired it or refuses to do so. It helps you through the steps you need to go through before filing a legal claim against your landlord and offers you guidance on the steps that follow.  
             </Typography>
             <Typography variant="h3">
           Why do you have to follow specific steps? 
@@ -65,10 +65,10 @@ export default function Home () {
  
             </Typography>
             <Typography gutterBottom>
- If these steps are not followed, the court has the power to make you pay legal costs that you could have otherwise recovered or the legal costs of the landlord. The court could also impose other sanctions, it has a wide set of powers.  
+ If these steps are not followed, the court has the power to make you pay your landlord's legal costs, and prevent you from recovering your legal costs. The court could also impose other sanctions because it has a wide set of powers.  
             </Typography>
             <Typography gutterBottom>
- In order to benefit from process, you need to be the tenant, lessees or a member of the tenant’s family living in the property. 
+ In order to benefit from process, you need to be the tenant or a member of the tenant’s family living in the property. 
  
             </Typography>
             <Typography variant="h3">
@@ -76,7 +76,7 @@ export default function Home () {
 
             </Typography>
             <Typography gutterBottom>
-          This protocol applies where the living conditions of your home has deteriorated or changed negatively compared to when you moved in.  
+          This protocol applies where the living conditions of your home have deteriorated or changed negatively compared to when you moved in.  
             </Typography>
             <Typography gutterBottom>
  This includes physical damage and deterioration but can be much wider. It can be an infestation, mould problems, a broken boiler, plumbing or gutter issues. Anything that would affect your ability to live normally in your home.  

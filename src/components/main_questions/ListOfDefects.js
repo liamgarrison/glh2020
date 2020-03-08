@@ -100,7 +100,7 @@ export default function Question({setQuestion, updateResponse, responses}) {
             </FormGroup>        
             <FormGroup>
               <TextField
-                label="Extent of damage e.g. top right corner near window"
+                label="Extent of damage e.g. paint peeling in top right corner of room"
                 variant="outlined"
                 onChange={e => setNewDefect({
                   ...newDefect,

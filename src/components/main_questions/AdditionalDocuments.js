@@ -12,7 +12,7 @@ export default function Question({setQuestion}) {
     <Box>
       <QuestionTitle text="Do you need to provide additional documents?"/>
       <Typography gutterBottom>
-          These could be documents that support your claim, e.g. GP letters, cost estimates.
+          These could be documents that support your claim, e.g. GP letters, cost estimates etc.
       </Typography>
       <Box display="flex" justifyContent="space-around">
         <Button variant="contained" color="primary" onClick={handleNo} size="large" >

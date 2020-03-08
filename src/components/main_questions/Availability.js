@@ -79,6 +79,7 @@ export default function Question({setQuestion, updateResponse, responses}) {
             <KeyboardDatePicker
               disableToolbar
               format="DD/MM/YYYY"
+              variant="inline"
               margin="normal"
               label="Date"
               value={newAvailability.date}
@@ -94,6 +95,7 @@ export default function Question({setQuestion, updateResponse, responses}) {
               disableToolbar
               format="HH:mm"
               margin="normal"
+              variant="inline"
               label="Start time"
               value={newAvailability.startAt}
               onChange={date => setNewAvailability({
@@ -108,6 +110,7 @@ export default function Question({setQuestion, updateResponse, responses}) {
               disableToolbar
               format="HH:mm"
               margin="normal"
+              variant="inline"
               label="End time"
               value={newAvailability.endAt}
               onChange={date => setNewAvailability({

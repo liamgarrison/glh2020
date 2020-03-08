@@ -69,6 +69,7 @@ export default function Question({setQuestion, updateResponse, responses}) {
               disableToolbar
               format="DD/MM/YYYY"
               margin="normal"
+              variant="inline"
               label="Date"
               value={newEvent.date}
               onChange={date => setNewEvent({

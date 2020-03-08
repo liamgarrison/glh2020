@@ -39,15 +39,11 @@ If they reply and agree to pay, great! We hope they do so promptly and this is t
       
       <Typography gutterBottom>
 
-If they do not reply by that date that doesn’t mean that they have agreed to pay for the disrepair, so you should consider your next steps.  
+If they do not reply by that date, it doesn’t mean that they have agreed to pay for the disrepair, so you should consider your next steps.  
       </Typography>
-      <Typography gutterBottom>
-
-You are now free to file a letter of claim that will start the legal proceedings. More information on how to do this can be found <Link target="_blank" rel="noopener noreferrer" href="https://www.citizensadvice.org.uk/law-and-courts/legal-system/taking-legal-action/small-claims/making-a-small-claim/">here</Link>.
-      </Typography>
- 
+    
       <Typography gutterBottom className={classes.bold}>
-Alternative dispute options 
+Alternative dispute resolution options 
 
       </Typography>
       <Typography gutterBottom>
@@ -74,6 +70,15 @@ You can find more information on alternative dispute resolution <Link target="_b
 
 For private tenants, the landlord, the letting agent or the property manager may be a member of a redress scheme enabling unresolved complaints about housing conditions to be independently resolved. 
       </Typography>
+      <Typography gutterBottom className={classes.bold}>
+
+Filing a claim
+      </Typography>
+      <Typography gutterBottom>
+
+You may wish to file a letter of claim that will start legal proceedings. More information on how to do this can be found <Link target="_blank" rel="noopener noreferrer" href="https://www.citizensadvice.org.uk/law-and-courts/legal-system/taking-legal-action/small-claims/making-a-small-claim/">here</Link>.
+      </Typography>
+ 
       <Typography gutterBottom className={classes.bold}>
 
 More information about your rights 
