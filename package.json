@@ -15,7 +15,7 @@
     "downloadjs": "^1.4.7",
     "ics": "^2.19.0",
     "lodash": "^4.17.15",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-router": "^5.1.2",
